@@ -9,6 +9,9 @@ import { CaracteristicasComponent } from './caracteristicas/caracteristicas.comp
 import { ClientesComponent } from './clientes/clientes.component';
 import { DestinosComponent } from './destinos/destinos.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import{HttpClient, HttpClientModule}from '@angular/common/http'
+
+import{DatosService}from './datos.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,10 @@ import { ContactoComponent } from './contacto/contacto.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
